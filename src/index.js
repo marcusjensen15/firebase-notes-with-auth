@@ -5,6 +5,7 @@ import App from './App';
 import { Route, BrowserRouter as Router } from 'react-router-dom';
 import LoginComponent from './Login/login';
 import SignupComponent from './Signup/signup';
+import DashboardComponent from './Dashboard/dashboard';
 
 import * as serviceWorker from './serviceWorker';
 import firebaseConfig from './firebasecreds.js';
@@ -20,7 +21,7 @@ const routing = (
     <div id='routing-container'>
       <Route path='/login' component={LoginComponent}></Route>
       <Route path='/signup' component={SignupComponent}></Route>
-      <Route path='/' component={App}></Route>
+      <Route path='/dashboard' component={DashboardComponent}></Route>
     </div>
   </Router>
 );
