@@ -85,8 +85,9 @@ class Dashboard extends React.Component {
               data['id'] = _doc.id;
               return data;
             });
-            console.log(notes);
-            this.setState({ notes: notes});
+
+            this.setState({ notes: notes,
+            email: _usr.email});
           });
       }
   });
@@ -131,6 +132,7 @@ newNote = async (title) => {
     const newNoteIndex = this.state.notes.indexOf(this.state.notes.filter(_note => _note.id === newID)[0]);
     this.setState({ selectedNote: this.state.notes[newNoteIndex], selectedNoteIndex: newNoteIndex});
 
+    console.log(this.state.email)
 }
 
 
