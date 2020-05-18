@@ -25,7 +25,8 @@ class EditorComponent extends React.Component {
     this.state = {
       text: '',
       title: '',
-      id: ''
+      id: '',
+      email: null
     };
   }
 
@@ -33,7 +34,8 @@ class EditorComponent extends React.Component {
     this.setState({
       text: this.props.selectedNote.body,
       title: this.props.selectedNote.title,
-      id: this.props.selectedNote.id
+      id: this.props.selectedNote.id,
+      email: this.props.email
     });
   }
 
@@ -83,7 +85,8 @@ class EditorComponent extends React.Component {
   update = debounce(() => {
     this.props.noteUpdate(this.state.id, {
       title: this.state.title,
-      body: this.state.text
+      body: this.state.text,
+      email: this.state.email
     })
   }, 1500);
 }

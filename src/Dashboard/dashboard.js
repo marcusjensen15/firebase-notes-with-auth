@@ -52,7 +52,8 @@ class Dashboard extends React.Component {
           selectedNote={this.state.selectedNote}
           selectedNoteIndex={this.state.selectedNoteIndex}
           notes={this.state.notes}
-          noteUpdate={this.noteUpdate}>
+          noteUpdate={this.noteUpdate}
+          email={this.state.email}>
         </EditorComponent>
         :
         null
@@ -60,35 +61,33 @@ class Dashboard extends React.Component {
       </div>);
   }
 
-  componentDidMount =() => {
-    firebase.firestore().collection('notes').onSnapshot(serverUpdate => {
-      const notes = serverUpdate.docs.map(_doc => {
-        const data = _doc.data();
-        data['id'] = _doc.id;
-        return data;
-      });
-      console.log(notes);
-      this.setState({ notes: notes});
-    });
-  }
+  // componentDidMount =() => {
+  //   firebase.firestore().collection('notes').onSnapshot(serverUpdate => {
+  //     const notes = serverUpdate.docs.map(_doc => {
+  //       const data = _doc.data();
+  //       data['id'] = _doc.id;
+  //       return data;
+  //     });
+  //     console.log(notes);
+  //     this.setState({ notes: notes});
+  //   });
+  // }
 
 // from chat tutorial
-  componentWillMount = () => {
+  componentDidMount = () => {
     firebase.auth().onAuthStateChanged(async _usr => {
       if(!_usr)
         this.props.history.push('/login');
       else {
-        await firebase
-          .firestore()
-          .collection('notes')
-          .where('users', 'array-contains', _usr.email)
-          .onSnapshot(async res => {
-            const notes = res.docs.map(_doc => _doc.data());
-            await this.setState({
-              email: _usr.email,
-              notes: notes
+        firebase.firestore().collection('notes').onSnapshot(serverUpdate => {
+            const notes = serverUpdate.docs.map(_doc => {
+              const data = _doc.data();
+              data['id'] = _doc.id;
+              return data;
             });
-          })
+            console.log(notes);
+            this.setState({ notes: notes});
+          });
       }
   });
 }
@@ -96,6 +95,7 @@ class Dashboard extends React.Component {
 //above from chat tutorial
 
 selectNote = (note, index) => this.setState({ selectedNoteIndex: index, selectedNote: note});
+
 noteUpdate = (id, noteObj) => {
   firebase
   .firestore()
@@ -104,6 +104,7 @@ noteUpdate = (id, noteObj) => {
   .update({
     title: noteObj.title,
     body: noteObj.body,
+    email: this.state.email,
     timestamp: firebase.firestore.FieldValue.serverTimestamp()
   })
 }
@@ -129,6 +130,7 @@ newNote = async (title) => {
     await this.setState({notes: [...this.state.notes, note]});
     const newNoteIndex = this.state.notes.indexOf(this.state.notes.filter(_note => _note.id === newID)[0]);
     this.setState({ selectedNote: this.state.notes[newNoteIndex], selectedNoteIndex: newNoteIndex});
+
 }
 
 
