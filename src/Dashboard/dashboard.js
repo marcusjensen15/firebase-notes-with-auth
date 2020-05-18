@@ -2,6 +2,8 @@ import React from 'react';
 import '../App.css';
 import SidebarComponent from '../sidebar/sidebar';
 import EditorComponent from '../editor/editor';
+import { Button, withStyles } from '@material-ui/core';
+
 
 const firebase = require('firebase');
 
@@ -19,12 +21,16 @@ const firebase = require('firebase');
 
 class Dashboard extends React.Component {
 
+//need logged in person email state var
+//notes will be filtered by this logged in user. Only show that user's notes.
+
   constructor(){
     super();
     this.state = {
       selectedNoteIndex: null,
       selectedNote: null,
-      notes: null
+      notes: null,
+      email: null
 
     };
   }
@@ -32,6 +38,7 @@ class Dashboard extends React.Component {
   render(){
     return(
       <div className="app-container">
+        <Button onClick={this.signOut}> Logout </Button>
         <SidebarComponent
           selectedNoteIndex={this.state.selectedNoteIndex}
           notes={this.state.notes}
@@ -65,6 +72,29 @@ class Dashboard extends React.Component {
     });
   }
 
+// from chat tutorial
+  componentWillMount = () => {
+    firebase.auth().onAuthStateChanged(async _usr => {
+      if(!_usr)
+        this.props.history.push('/login');
+      else {
+        await firebase
+          .firestore()
+          .collection('notes')
+          .where('users', 'array-contains', _usr.email)
+          .onSnapshot(async res => {
+            const notes = res.docs.map(_doc => _doc.data());
+            await this.setState({
+              email: _usr.email,
+              notes: notes
+            });
+          })
+      }
+  });
+}
+
+//above from chat tutorial
+
 selectNote = (note, index) => this.setState({ selectedNoteIndex: index, selectedNote: note});
 noteUpdate = (id, noteObj) => {
   firebase
@@ -77,6 +107,10 @@ noteUpdate = (id, noteObj) => {
     timestamp: firebase.firestore.FieldValue.serverTimestamp()
   })
 }
+
+//signout from chat tutorial
+signOut = () => firebase.auth().signOut();
+
 
 newNote = async (title) => {
   const note = {
@@ -96,6 +130,8 @@ newNote = async (title) => {
     const newNoteIndex = this.state.notes.indexOf(this.state.notes.filter(_note => _note.id === newID)[0]);
     this.setState({ selectedNote: this.state.notes[newNoteIndex], selectedNoteIndex: newNoteIndex});
 }
+
+
 deleteNote = async (note) =>{
   const noteIndex = this.state.notes.indexOf(note);
   await this.setState({notes: this.state.notes.filter(_note => _note !== note)});

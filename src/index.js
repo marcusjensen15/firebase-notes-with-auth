@@ -1,12 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+// import App from './App';
 import { Route, BrowserRouter as Router } from 'react-router-dom';
 import LoginComponent from './Login/login';
 import SignupComponent from './Signup/signup';
 import DashboardComponent from './Dashboard/dashboard';
-
 import * as serviceWorker from './serviceWorker';
 import firebaseConfig from './firebasecreds.js';
 
