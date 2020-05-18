@@ -2,6 +2,10 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
+import { Route, BrowserRouter as Router } from 'react-router-dom';
+import LoginComponent from './Login/login';
+import SignupComponent from './Signup/signup';
+
 import * as serviceWorker from './serviceWorker';
 import firebaseConfig from './firebasecreds.js';
 
@@ -11,11 +15,18 @@ require('firebase/firestore');
 
 firebase.initializeApp(firebaseConfig);
 
+const routing = (
+  <Router>
+    <div id='routing-container'>
+      <Route path='/login' component={LoginComponent}></Route>
+      <Route path='/signup' component={SignupComponent}></Route>
+      <Route path='/' component={App}></Route>
+    </div>
+  </Router>
+);
+
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  
-  </React.StrictMode>,
+  routing,
   document.getElementById('root')
 );
 
