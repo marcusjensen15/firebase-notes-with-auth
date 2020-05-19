@@ -30,7 +30,7 @@ newNoteBtn: {
 },
 sidebarContainer: {
   marginTop: '0px',
-  width: '300px',
+  width: '20%',
   height: '100%',
   boxSizing: 'border-box',
   float: 'left',

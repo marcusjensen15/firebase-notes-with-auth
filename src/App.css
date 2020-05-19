@@ -13,6 +13,7 @@ html, body {
 .app-container {
   height: 100%;
   box-sizing: border-box;
+
 }
 .quill {
   height: 100%;
@@ -36,4 +37,15 @@ html, body {
   position: absolute;
   top: 50px;
   left: calc(50% - 165px);
+}
+#logoutButton{
+  font-size: 18px;
+  text-align: center;
+  color: white;
+  height: 2%;
+  background-color: #28487D;
+  width: 10%;
+  float: right;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
 }

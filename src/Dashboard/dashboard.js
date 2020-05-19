@@ -5,6 +5,7 @@ import EditorComponent from '../editor/editor';
 import { Button, withStyles } from '@material-ui/core';
 
 
+
 const firebase = require('firebase');
 
 //componentDidMount - executing all of the code within the function as the component mounts.
@@ -38,7 +39,7 @@ class Dashboard extends React.Component {
   render(){
     return(
       <div className="app-container">
-        <Button onClick={this.signOut}> Logout </Button>
+        <button onClick={this.signOut} id="logoutButton"> Logout </button>
         <SidebarComponent
           selectedNoteIndex={this.state.selectedNoteIndex}
           notes={this.state.notes}
