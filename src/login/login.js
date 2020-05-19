@@ -58,6 +58,20 @@ class LoginComponent extends React.Component {
     );
   }
 
+
+//added this to redirect to the dashboard if the user is already logged in. will do the same for signup.
+  componentDidMount = () => {
+    firebase.auth().onAuthStateChanged(async _usr => {
+      if(!_usr)
+        this.props.history.push('/login');
+      else {
+        this.props.history.push('/dashboard');
+
+      }
+  });
+}
+
+
   userTyping = (whichInput, event) => {
     switch (whichInput) {
       case 'email':
