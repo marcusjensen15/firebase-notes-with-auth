@@ -73,21 +73,36 @@ class Dashboard extends React.Component {
   //   });
   // }
 
-// from chat tutorial
+// flitering the notes by the user logged-in
+
+//set email state needs to be before everything else. the bug is when I'm filtering the notes, it isn't letting me add new ones
   componentDidMount = () => {
     firebase.auth().onAuthStateChanged(async _usr => {
       if(!_usr)
         this.props.history.push('/login');
       else {
+      await this.setState({ email: _usr.email});
         firebase.firestore().collection('notes').onSnapshot(serverUpdate => {
             const notes = serverUpdate.docs.map(_doc => {
+
               const data = _doc.data();
               data['id'] = _doc.id;
+              // console.log(data);
               return data;
             });
 
-            this.setState({ notes: notes,
+
+            const usersNotes = notes.filter(_note => _note.email === this.state.email);
+
+
+
+            this.setState({ notes: usersNotes,
             email: _usr.email});
+
+
+
+            // console.log(this.state.email);
+            // console.log(usersNotes);
           });
       }
   });
@@ -113,7 +128,7 @@ noteUpdate = (id, noteObj) => {
 //signout from chat tutorial
 signOut = () => firebase.auth().signOut();
 
-
+//added email to .add method
 newNote = async (title) => {
   const note = {
     title: title,
@@ -125,7 +140,8 @@ newNote = async (title) => {
     .add({
       title: note.title,
       body: note.body,
-      timestamp: firebase.firestore.FieldValue.serverTimestamp()
+      timestamp: firebase.firestore.FieldValue.serverTimestamp(),
+      email: this.state.email
     })
     const newID = newFromDB.id;
     await this.setState({notes: [...this.state.notes, note]});
