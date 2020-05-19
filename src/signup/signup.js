@@ -66,7 +66,7 @@ class SignupComponent extends React.Component {
   componentDidMount = () => {
     firebase.auth().onAuthStateChanged(async _usr => {
       if(!_usr)
-        this.props.history.push('/login');
+        this.props.history.push('/signup');
       else {
         this.props.history.push('/dashboard');
 

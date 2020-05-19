@@ -30,12 +30,13 @@ newNoteBtn: {
 },
 sidebarContainer: {
   marginTop: '0px',
-  width: '20%',
+  width: '15%',
   height: '100%',
   boxSizing: 'border-box',
   float: 'left',
   overflowY: 'scroll',
   overflowX: 'hidden'
+
 },
 newNoteInput: {
   width: '100%',
