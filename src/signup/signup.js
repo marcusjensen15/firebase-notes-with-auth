@@ -63,16 +63,16 @@ class SignupComponent extends React.Component {
     );
   }
 
-  componentDidMount = () => {
-    firebase.auth().onAuthStateChanged(async _usr => {
-      if(!_usr)
-        this.props.history.push('/signup');
-      else {
-        this.props.history.push('/dashboard');
-
-      }
-  });
-}
+//   componentDidMount = () => {
+//     firebase.auth().onAuthStateChanged(async _usr => {
+//       if(!_usr)
+//         this.props.history.push('/signup');
+//       else {
+//         this.props.history.push('/dashboard');
+//
+//       }
+//   });
+// }
 
   userTyping = (whichInput, event) => {
     switch (whichInput) {
