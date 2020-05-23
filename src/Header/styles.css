@@ -2,11 +2,13 @@
   text-align: center;
   color: #3F51B5;
   font-size: 4.5vh;
-  margin: 18px;
+  margin: 10px;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
 }
 
 .appDescription{
   text-align: center;
   font-size: 2.3vh;
   margin: 0px;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
 }
