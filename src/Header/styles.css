@@ -1,9 +1,12 @@
 .welcomeHeader{
-  
-
+  text-align: center;
+  color: #3F51B5;
+  font-size: 4.5vh;
+  margin: 18px;
 }
 
 .appDescription{
-
-
+  text-align: center;
+  font-size: 2.3vh;
+  margin: 0px;
 }
