@@ -3,7 +3,7 @@ import './styles.css'
 
 
 
-export default function LoggedInHeader(){
+export default function Header(){
 
 
 
