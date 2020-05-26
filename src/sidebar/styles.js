@@ -31,7 +31,7 @@ newNoteBtn: {
 sidebarContainer: {
   marginTop: '0px',
   width: '15%',
-  height: '100%',
+  height: '100vh',
   boxSizing: 'border-box',
   float: 'left',
   overflowY: 'scroll',
