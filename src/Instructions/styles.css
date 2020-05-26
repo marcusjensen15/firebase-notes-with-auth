@@ -1,9 +1,15 @@
-.welcomeHeader{
+.instructionsContainer{
   text-align: center;
-  color: #3F51B5;
-  font-size: 5vh;
-  margin: 10px;
+  width: 80%;
   font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  /* position: center; */
+  padding-top: 5%;
+  margin-left: 20%;
+}
+
+.instructionsList{
+  list-style-type: none;
+  font-size: 20px;
 }
 
 .appDescription{
