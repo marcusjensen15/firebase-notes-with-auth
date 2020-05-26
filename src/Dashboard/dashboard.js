@@ -3,6 +3,7 @@ import '../App.css';
 import SidebarComponent from '../sidebar/sidebar';
 import EditorComponent from '../editor/editor';
 import { Button, withStyles } from '@material-ui/core';
+import InstructionsComponent from '../instructions/instructions';
 
 
 
@@ -57,7 +58,7 @@ class Dashboard extends React.Component {
           email={this.state.email}>
         </EditorComponent>
         :
-        null
+        <InstructionsComponent></InstructionsComponent>
         }
       </div>);
   }
