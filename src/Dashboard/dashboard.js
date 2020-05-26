@@ -39,7 +39,7 @@ class Dashboard extends React.Component {
   render(){
     return(
       <div className="app-container">
-        <button onClick={this.signOut} id="logoutButton"> Logout </button>
+        <button onClick={this.signOut} id="logoutButton">LOGOUT</button>
         <SidebarComponent
           selectedNoteIndex={this.state.selectedNoteIndex}
           notes={this.state.notes}
