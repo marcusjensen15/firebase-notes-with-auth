@@ -19,7 +19,7 @@ unreadMessage: {
 },
 newNoteBtn: {
   width: '100%',
-  height: '35px',
+  height: '40px',
   borderBottom: '1px solid black',
   borderRadius: '0px',
   backgroundColor: '#29487d',
