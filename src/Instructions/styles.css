@@ -1,0 +1,25 @@
+.instructionsContainer{
+  text-align: center;
+  width: 80%;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  /* position: center; */
+  padding-top: 5%;
+  margin-left: 18%;
+}
+
+.instructionsList{
+  list-style-type: none;
+  font-size: 20px;
+}
+
+.instructionsTitle{
+  font-size: 30px;
+  color: #28487D;
+}
+
+.appDescription{
+  text-align: center;
+  font-size: 2.5vh;
+  margin: 0px;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+}
