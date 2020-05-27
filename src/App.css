@@ -79,11 +79,12 @@ html, body {
     margin-bottom: 12px;
   }
 
+  /* end instructions component mobile styling */
+
   /* sidebar component mobile styling */
 
   .app-container .SidebarComponent-sidebarContainer-5 {
     width: 30%;
-    /* font-size: 10px; */
   }
 
   /* sidebar item mobile styling */
@@ -105,6 +106,26 @@ html, body {
 .MuiSvgIcon-root.SidebarItemComponent-deleteIcon-46{
   height: 18px;
 }
+
+/* end sidebar component mobile styling */
+
+/* editor component mobile styling */
+
+/* this is the entire editor component div */
+.app-container .EditorComponent-editorContainer-123{
+  width: 70%;
+}
+
+/* this is the note title */
+
+.EditorComponent-editorContainer-123 .EditorComponent-titleInput-121{
+  font-size: 12px;
+  height: 40px;
+  font-weight: bold;
+  padding-left: 10px;
+}
+
+/* end editor component mobile styling */
 
 
 /* log-out button mobile styling */
