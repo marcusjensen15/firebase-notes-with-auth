@@ -94,10 +94,17 @@ html, body {
   font-weight: bold;
 }
 
+/* this is targeting each list items sample pargagraph within the sidebar. */
+
 .MuiTypography-root.MuiListItemText-secondary.MuiTypography-body2.MuiTypography-colorTextSecondary.MuiTypography-displayBlock {
   font-size: 12px;
 }
 
+/* this is targeting the trash can delete icon */
+
+.MuiSvgIcon-root.SidebarItemComponent-deleteIcon-46{
+  height: 18px;
+}
 
 
 /* log-out button mobile styling */
