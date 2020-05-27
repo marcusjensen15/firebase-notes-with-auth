@@ -62,8 +62,14 @@ html, body {
   .app-container .instructionsContainer {
     background-color: orange;
     width: 70%;
-  /* width not adjusting */
   }
+  .app-container .instructionsContainer ul {
+    font-size: 12px;
+  }
+  .app-container .instructionsContainer h2 {
+    font-size: 20px;
+  }
+
   #logoutButton{
     width: 20%;
   }
