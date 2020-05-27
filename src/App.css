@@ -62,9 +62,10 @@ html, body {
 
 @media screen and (max-width: 1200px) {
   .app-container .instructionsContainer {
-    background-color: orange;
+    /* background-color: orange; */
     width: 70%;
-    padding-top: 15%;
+    padding-top: 20%;
+    padding-left: 5%;
   }
   .app-container .instructionsContainer ul {
     font-size: 12px;
@@ -74,7 +75,12 @@ html, body {
   }
 
   .app-container .instructionsContainer .instructionsList li{
-    margin-bottom: 10px;
+    margin-bottom: 12px;
+  }
+
+  .app-container .SidebarComponent-sidebarContainer-5 {
+
+    width: 30%;
   }
 
   #logoutButton{
