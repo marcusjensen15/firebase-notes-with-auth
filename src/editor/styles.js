@@ -33,6 +33,7 @@ const styles = theme => ({
     width: '80%',
     float: 'left'
   }
+
 });
 
 export default styles;

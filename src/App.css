@@ -57,3 +57,14 @@ html, body {
 #logoutButton:hover{
   background-color: #88a2ce;
 }
+
+@media screen and (max-width: 1200px) {
+  .app-container .instructionsContainer {
+    background-color: orange;
+    width: 70%;
+  /* width not adjusting */
+  }
+  #logoutButton{
+    width: 20%;
+  }
+}
