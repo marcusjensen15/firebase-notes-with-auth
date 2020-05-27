@@ -100,6 +100,7 @@ html, body {
 
 .MuiTypography-root.MuiListItemText-secondary.MuiTypography-body2.MuiTypography-colorTextSecondary.MuiTypography-displayBlock {
   font-size: 12px;
+  display: none;
 }
 
 /* this is targeting the trash can delete icon */
