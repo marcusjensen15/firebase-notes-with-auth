@@ -57,3 +57,84 @@ html, body {
 #logoutButton:hover{
   background-color: #88a2ce;
 }
+
+/* Below is all mobile styling for all of the components. I didn't want to modify each individual style object within each component folder.  */
+
+@media screen and (max-width: 1200px) {
+
+  /* instructions component mobile styling */
+  .app-container .instructionsContainer {
+    width: 70%;
+    padding-top: 20%;
+    padding-left: 5%;
+  }
+  .app-container .instructionsContainer ul {
+    font-size: 12px;
+  }
+  .app-container .instructionsContainer h2 {
+    font-size: 16px;
+
+  }
+
+  .app-container .instructionsContainer .instructionsList li{
+    margin-bottom: 12px;
+  }
+
+  /* end instructions component mobile styling */
+
+  /* sidebar component mobile styling */
+
+  .app-container .SidebarComponent-sidebarContainer-5 {
+    width: 30%;
+  }
+
+  /* sidebar item mobile styling */
+
+  /* this mess is all the classes necessary to target each list item's title */
+.MuiTypography-root.MuiListItemText-primary.MuiTypography-body1.MuiTypography-displayBlock {
+  font-size: 12px;
+  font-weight: bold;
+}
+
+/* this is targeting each list items sample pargagraph within the sidebar. */
+
+.MuiTypography-root.MuiListItemText-secondary.MuiTypography-body2.MuiTypography-colorTextSecondary.MuiTypography-displayBlock {
+  font-size: 12px;
+  display: none;
+}
+
+/* this is targeting the trash can delete icon */
+
+.MuiSvgIcon-root.SidebarItemComponent-deleteIcon-46{
+  height: 18px;
+}
+
+/* end sidebar component mobile styling */
+
+/* editor component mobile styling */
+
+/* this is the entire editor component div */
+.app-container .EditorComponent-editorContainer-123{
+  width: 70%;
+}
+
+/* this is the note title */
+
+.EditorComponent-editorContainer-123 .EditorComponent-titleInput-121{
+  font-size: 12px;
+  height: 40px;
+  font-weight: bold;
+  padding-left: 10px;
+}
+
+/* end editor component mobile styling */
+
+
+/* log-out button mobile styling */
+
+  #logoutButton{
+    width: 20%;
+  }
+
+
+}
