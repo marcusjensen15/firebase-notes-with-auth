@@ -82,9 +82,17 @@ html, body {
   /* sidebar component mobile styling */
 
   .app-container .SidebarComponent-sidebarContainer-5 {
-
     width: 30%;
+    /* font-size: 10px; */
   }
+
+  /* sidebar item mobile styling */
+
+  /* this mess is all the classes necessary to target each list item's title */
+.MuiTypography-root.MuiListItemText-primary.MuiTypography-body1.MuiTypography-displayBlock {
+  font-size: 12px;
+}
+
 
 
 /* log-out button mobile styling */
@@ -93,5 +101,5 @@ html, body {
     width: 20%;
   }
 
-  
+
 }
