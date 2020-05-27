@@ -62,6 +62,7 @@ html, body {
   .app-container .instructionsContainer {
     background-color: orange;
     width: 70%;
+    padding-top: 15%;
   }
   .app-container .instructionsContainer ul {
     font-size: 12px;
