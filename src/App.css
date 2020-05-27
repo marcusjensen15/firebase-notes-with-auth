@@ -61,8 +61,9 @@ html, body {
 /* Below is all mobile styling for all of the components. I didn't want to modify each individual style object within each component folder.  */
 
 @media screen and (max-width: 1200px) {
+
+  /* instructions component mobile styling */
   .app-container .instructionsContainer {
-    /* background-color: orange; */
     width: 70%;
     padding-top: 20%;
     padding-left: 5%;
@@ -78,12 +79,19 @@ html, body {
     margin-bottom: 12px;
   }
 
+  /* sidebar component mobile styling */
+
   .app-container .SidebarComponent-sidebarContainer-5 {
 
     width: 30%;
   }
 
+
+/* log-out button mobile styling */
+
   #logoutButton{
     width: 20%;
   }
+
+  
 }
