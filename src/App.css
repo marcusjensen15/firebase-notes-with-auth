@@ -71,6 +71,10 @@ html, body {
     font-size: 20px;
   }
 
+  .app-container .instructionsContainer .instructionsList li{
+    margin-bottom: 10px;
+  }
+
   #logoutButton{
     width: 20%;
   }
