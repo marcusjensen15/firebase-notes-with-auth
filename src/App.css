@@ -58,6 +58,8 @@ html, body {
   background-color: #88a2ce;
 }
 
+/* Below is all mobile styling for all of the components. I didn't want to modify each individual style object within each component folder.  */
+
 @media screen and (max-width: 1200px) {
   .app-container .instructionsContainer {
     background-color: orange;
