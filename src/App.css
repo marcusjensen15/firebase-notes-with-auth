@@ -114,13 +114,13 @@ html, body {
 /* editor component mobile styling */
 
 /* this is the entire editor component div */
-.app-container .EditorComponent-editorContainer-123{
+#editorContainer{
   width: 70%;
 }
 
 /* this is the note title */
 
-.EditorComponent-editorContainer-123 .EditorComponent-titleInput-121{
+#editorTitleInput{
   font-size: 12px;
   height: 40px;
   font-weight: bold;
