@@ -53,12 +53,13 @@ class EditorComponent extends React.Component {
     const { classes } = this.props;
 
     return(
-      <div className={classes.editorContainer}>
+      <div className={classes.editorContainer} id="editorContainer">
         <BorderColorIcon
           className={classes.editIcon}>
         </BorderColorIcon>
 
           <input
+            id="editorTitleInput"
             className={classes.titleInput}
             placeholder='Note title...'
             value={this.state.title ? this.state.title : ""}

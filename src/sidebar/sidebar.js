@@ -23,7 +23,7 @@ class SidebarComponent extends React.Component {
     if(notes){
 
       return(
-      <div className={classes.sidebarContainer}>
+      <div className={classes.sidebarContainer} id="sidebarContainer">
         <Button
           onClick={this.newNoteBtnClick}
           className={classes.newNoteBtn}>

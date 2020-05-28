@@ -84,7 +84,7 @@ html, body {
 
   /* sidebar component mobile styling */
 
-  .app-container .SidebarComponent-sidebarContainer-5 {
+  .app-container #sidebarContainer {
     width: 30%;
   }
 
@@ -105,7 +105,7 @@ html, body {
 
 /* this is targeting the trash can delete icon */
 
-.MuiSvgIcon-root.SidebarItemComponent-deleteIcon-46{
+#trashIcon{
   height: 18px;
 }
 
@@ -114,13 +114,13 @@ html, body {
 /* editor component mobile styling */
 
 /* this is the entire editor component div */
-.app-container .EditorComponent-editorContainer-123{
+#editorContainer{
   width: 70%;
 }
 
 /* this is the note title */
 
-.EditorComponent-editorContainer-123 .EditorComponent-titleInput-121{
+#editorTitleInput{
   font-size: 12px;
   height: 40px;
   font-weight: bold;
