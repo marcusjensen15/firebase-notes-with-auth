@@ -9,7 +9,7 @@ import withStyles from '@material-ui/core/styles/withStyles';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
-import Header from '../Header/header';
+import Header from '../header/header';
 
 const firebase = require("firebase");
 
