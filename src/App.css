@@ -84,7 +84,7 @@ html, body {
 
   /* sidebar component mobile styling */
 
-  .app-container .SidebarComponent-sidebarContainer-5 {
+  .app-container #sidebarContainer {
     width: 30%;
   }
 

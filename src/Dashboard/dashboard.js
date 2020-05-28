@@ -46,7 +46,8 @@ class Dashboard extends React.Component {
           notes={this.state.notes}
           deleteNote={this.deleteNote}
           selectNote={this.selectNote}
-          newNote={this.newNote}>
+          newNote={this.newNote}
+          >
         </SidebarComponent>
         {
         this.state.selectedNote ?
