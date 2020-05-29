@@ -32,7 +32,7 @@ class LoginComponent extends React.Component {
       <main className={classes.main}>
         <Header></Header>
         <CssBaseline/>
-        <Paper className={classes.paper}>
+        <Paper className={classes.paper} id="logInFormContainer">
           <Typography component="h1" variant="h5">
             Log In!
           </Typography>

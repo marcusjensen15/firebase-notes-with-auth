@@ -140,10 +140,13 @@ html, body {
 
   #signUpFormContainer{
     margin-top: 2%;
-
   }
 
   /* signup form container mobile styling  */
 
+  #logInFormContainer{
+    margin-top: 2%;
+
+  }
 
 }
