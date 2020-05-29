@@ -33,7 +33,7 @@ class SignupComponent extends React.Component {
       <main className={classes.main}>
         <Header></Header>
         <CssBaseline/>
-        <Paper className={classes.paper}>
+        <Paper className={classes.paper} id="signUpFormContainer">
           <Typography component="h1" variant="h5">
             Sign Up!
           </Typography>

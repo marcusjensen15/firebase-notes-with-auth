@@ -136,5 +136,14 @@ html, body {
     width: 20%;
   }
 
+  /* signup form container mobile styling  */
+
+  #signUpFormContainer{
+    margin-top: 2%;
+
+  }
+
+  /* signup form container mobile styling  */
+
 
 }
