@@ -53,8 +53,9 @@ class LoginComponent extends React.Component {
             </Typography> :
             null
           }
-          <h5 className={classes.noAccountHeader}>Don't Have An Account?</h5>
+          
           <Link className={classes.signUpLink} to='/signup'>Sign Up!</Link>
+          <Link className={classes.signUpLink} to='https://marcus-notes.web.app'>Demo Version (no Sign Up required)</Link>
         </Paper>
       </main>
     );
